@@ -56,7 +56,7 @@ More feautures coming soon...
    
 
   
-<u>## Deployment Methods</u>
+<ins>## Deployment Methods</ins>
 
 ### Heroku
 
