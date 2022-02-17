@@ -9,6 +9,9 @@ bot = Client(
     api_hash="",
     bot_token=""
 )
+
+STICKER_MESSAGE = "https://telegra.ph/file/0a7f2e9ffab72fcc400f8.png"
+
 START_MESSAGE = "**𝐒𝐚𝐧𝐢𝐥𝐚'𝐬 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐁𝐨𝐭**\n\n🙋‍♂Hello, This is Sanila's Telegram Assistant bot™. This bot was created to collect your feedbacks, bugs and ideas about Sanila's bots😊. 𝐂𝐥𝐢𝐜𝐤 /help 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐭𝐡𝐢𝐧𝐠𝐬.\n\n" \
                 "**These are the bots that created by Sanila🙇‍♂.**\n\n" \
                 "▬▬▬▬ ◈ @songdownload597_bot\n" \
@@ -29,9 +32,11 @@ START_MESSAGE_BUTTONS = [
 
 @bot.on_message(filters.command("start") & filters.private)
 def start(bot, message):
+    sticker = STICKER_MESSAGE
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     message.reply(
+        sticker=sticker
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
@@ -74,18 +79,21 @@ def reply_to_About(bot, message):
 
 @bot.on_message(filters.regex("Feedback"))
 def reply_to_Feedback(bot, message):
+    bot.reply_sticker("https://telegra.ph/file/393ef93bf57458d541da6.png")
     bot.send_message(message.chat.id,
                      "Sanila welcome your valuable feedbacks about his bots💖 Send your feedback to me now and I will send it to Sanila🙂")
 
 
 @bot.on_message(filters.regex("Report Bugs"))
 def reply_to_Report(bot, message):
+    bot.reply_sticker("https://telegra.ph/file/e40644b121bafa74aaf4d.png")
     bot.send_message(message.chat.id,
-                     "I am sorry to hear that you have faced issues in Sanila's bots😶 Send me your issue and I will send it to Sanila🙃")
+                     "I am sorry to hear that you have faced issues in Sanila's bots😶 Send me your issue and I will send it to Sanila🥲")
 
 
 @bot.on_message(filters.regex("Github"))
 def reply_to_Github(bot, message):
+    bot.reply_sticker("https://telegra.ph/file/3145f61ab7e2fc45ee768.png")
     bot.send_message(message.chat.id,
                      "Sanila not only creates bots but also so many projects😉✌️You can check those by clicking this link👇\nhttps://github.com/sanila2007")
 
