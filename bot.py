@@ -1,10 +1,17 @@
 import os
 import pyrogram
+import telepotpro
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 from config import Config
+from dotenv import load_dotenv
+from os.path import join, dirname
 
-bot = Client("bot", api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+TOKEN = os.environ.get("TOKEN")
+bot = telepotpro.Bot(TOKEN)
 
 STICKER_MESSAGE = "https://telegra.ph/file/0a7f2e9ffab72fcc400f8.png"
 
