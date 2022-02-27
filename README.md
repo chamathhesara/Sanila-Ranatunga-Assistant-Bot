@@ -56,11 +56,11 @@ More feautures coming soon...
    
 
   
-<ins>## Deployment Methods</ins>
+## Deployment Methods
 
 ### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sanila2007/Sanila-Ranatunga-Assistant-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chamathhesara/Sanila-Ranatunga-Assistant-Bot)
     
  
 <br>
@@ -68,9 +68,9 @@ More feautures coming soon...
 
 🆅<b>0.7</b>
 
- -Added InlineKeyboardButtons
- -Added ReplyKeyboardButtons
- -Optimizations and minor bug fixes
+ - Added InlineKeyboardButtons
+ - Added ReplyKeyboardButtons
+ - Optimizations and minor bug fixes
 
 🆅<b>0.6</b>
 
