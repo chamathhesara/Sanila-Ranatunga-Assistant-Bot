@@ -39,7 +39,7 @@ def start(bot, message):
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
     message.reply(
-        sticker=sticker
+        sticker=sticker,
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True
@@ -69,8 +69,8 @@ def greet(bot, message):
     reply_markup = ReplyKeyboardMarkup(REPLY_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
     message.reply(
         text=text,
-        reply_markup=reply_markup
-
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
     )
 
 
