@@ -34,7 +34,7 @@ START_MESSAGE_BUTTONS = [
 
 
 @bot.on_message(filters.command("start") & filters.private)
-def start(bot, message):
+def command(bot, message):
     sticker = STICKER_MESSAGE
     text = START_MESSAGE
     reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
@@ -82,21 +82,18 @@ def reply_to_About(bot, message):
 
 @bot.on_message(filters.regex("Feedback"))
 def reply_to_Feedback(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/393ef93bf57458d541da6.png")
     bot.send_message(message.chat.id,
                      "Sanila welcome your valuable feedbacks about his bots💖 Send your feedback to me now and I will send it to Sanila🙂")
 
 
 @bot.on_message(filters.regex("Report Bugs"))
 def reply_to_Report(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/e40644b121bafa74aaf4d.png")
     bot.send_message(message.chat.id,
                      "I am sorry to hear that you have faced issues in Sanila's bots😶 Send me your issue and I will send it to Sanila🥲")
 
 
 @bot.on_message(filters.regex("Github"))
 def reply_to_Github(bot, message):
-    bot.reply_sticker("https://telegra.ph/file/3145f61ab7e2fc45ee768.png")
     bot.send_message(message.chat.id,
                      "Sanila not only creates bots but also so many projects😉✌️You can check those by clicking this link👇\nhttps://github.com/sanila2007")
 
